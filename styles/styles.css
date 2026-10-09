@@ -1,8 +1,8 @@
 section{
-    min-height: 100vh;
+    min-height: 80vh;
     max-width:1100px;
     margin:0 auto;
-    padding: 4rem 1.5rem;
+    padding: 5rem 1.5rem;
 }
 a{
     text-decoration: none;
@@ -19,11 +19,13 @@ html {
   scroll-behavior: smooth;
 }
 :root{
-    --color-bg: #2e2c2c;
+    --color-bg: black;
     --color-text: #b9b5b5;
     --color-primary: #4fd1c5;
+    --color-white:white;
 }
 header{
+    background:transparent;
     position: sticky;
     top:0;
     z-index: 200;
@@ -35,7 +37,7 @@ nav{
     align-items: center;
     max-width: 1100px;
     margin:0 auto;
-    padding:0.75rem 1.5rem;
+    padding:1rem 1.5rem;
 }
 nav a{
     color:var(--color-bg);
@@ -54,8 +56,8 @@ nav a:hover{
 body{
     background-color: var(--color-bg);
     color:var(--color-text);
-    font-family: system-ui, sans-serif;
-    line-height: 1.6;
+    font-family: "DM Sans", system-ui, sans-serif;
+    line-height: 1.7;
 }
 .links{
     display: flex;
@@ -65,19 +67,26 @@ h1{
     font-weight: bold;
     font-size: 65px;
     color:white;
+    font-family: "Space Grotesk", system-ui, sans-serif;
 }
-#q1{
-    color:var(--color-text);
+.q1{
+    color:var(--color-primary);
     font-size: 20px;
 }
 #home{
-    margin:0 auto;
-    max-width: 700px;
+    display: flex;
+    min-height: 100vh;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+}
+p{
+    max-width: 620px;
 }
 .btn{
     display:inline-block;
     margin-top: 20px;
-    background-color:rgb(110, 103, 138);
+    background-color:rgb(38, 37, 44);
     color:white;
     padding: 0.5rem 1.2rem;
     border: 2px solid var(--color-text);
@@ -88,4 +97,19 @@ h1{
 .btn:hover{
     background-color: rgb(122, 117, 139);
     transform:scale(1.05);
+}
+.q2{
+    font-size: 30px;
+}
+.ab{
+    font-size: 20px;
+    gap:1.4;
+    margin-top:20px;
+    align-content: justify;
+    color:var(--color-white);
+    font-family:  "DM Sans", system-ui, sans-serif;
+    text-decoration: none;
+}
+h2{
+    font-family: "Space Grotesk", system-ui, sans-serif;
 }
