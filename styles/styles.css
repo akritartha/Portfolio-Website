@@ -75,10 +75,11 @@ h1{
 }
 #home{
     display: flex;
-    min-height: 100vh;
+    min-height: 80vh;
     align-items: flex-start;
     flex-direction: column;
     justify-content: center;
+   
 }
 p{
     max-width: 620px;
@@ -103,7 +104,7 @@ p{
 }
 .ab{
     font-size: 20px;
-    gap:1.4;
+    gap:1.4rem;
     margin-top:20px;
     align-content: justify;
     color:var(--color-white);
@@ -138,4 +139,8 @@ h2{
 }
 section + section {
     border-top: 1px solid turquoise;
+}
+.hometab{
+    display: flex;
+    gap:1rem;
 }
