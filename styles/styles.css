@@ -113,3 +113,29 @@ p{
 h2{
     font-family: "Space Grotesk", system-ui, sans-serif;
 }
+.skills{
+    margin-top: 15px;
+    max-width: 620px;
+    display: flex;
+    flex-wrap: wrap;
+    gap:0.9rem;
+}
+.tag{
+    background-color:rgb(38, 37, 44);
+    color:white;
+    margin-top: 20px;
+    padding: 0.5rem 1.2rem;
+    border:2px solid white;
+    border-radius: 999px;
+    transition:transform 0.2s;
+}
+.tag:hover{
+    background-color: rgb(122, 117, 139);
+    transform:scale(1.05);
+}
+#skills{
+    min-height: 50vh;
+}
+section + section {
+    border-top: 1px solid turquoise;
+}
