@@ -255,15 +255,11 @@ footer {
   padding: 2rem 1.5rem;
   border-top: 1px solid var(--color-primary);
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   gap: 1rem;
   font-size: 0.9rem;
-}
-
-footer .btn {
-  margin-top: 0;
 }
 
 /* Phones*/
