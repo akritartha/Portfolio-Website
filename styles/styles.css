@@ -337,3 +337,26 @@ footer p {
   align-items: center;
   justify-content: center;
 }
+.rail {
+  position: fixed;
+  right: 5.5rem;
+  top: 15vh;
+  height: 70vh;
+  width: 2px;
+  background-color: var(--color-border);
+  pointer-events: none;
+}
+
+.stickman {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100px;
+  height: 200px;
+  color: var(--color-primary);
+  transform: translate(-100%, var(--y, 0px));
+}
+
+@media (max-width: 1000px) {
+  .rail { display: none; }
+}
