@@ -1,11 +1,31 @@
 /*Variables */
-:root {
+/* :root {
   --color-bg: black;
   --color-text: #b9b5b5;
   --color-primary: #4fd1c5;
   --color-white: white;
+} */
+:root {
+  --color-bg: #0b0f14;
+  --color-surface: #131a22;
+  --color-surface-2: #1b2530;
+  --color-border: #2a3644;
+  --color-text: #c9d3dd;
+  --color-heading: #ffffff;
+  --color-primary: #4fd1c5;
+  --color-on-primary: #0b0f14;
 }
 
+[data-theme="light"] {
+  --color-bg: #f6f8fa;
+  --color-surface: #ffffff;
+  --color-surface-2: #eaf0f5;
+  --color-border: #d3dce5;
+  --color-text: #3b4856;
+  --color-heading: #0b1620;
+  --color-primary: #0f9d8f;
+  --color-on-primary: #ffffff;
+}
 /* Reset and base */
 * {
   margin: 0;
@@ -42,16 +62,17 @@ p {
 h1 {
   font-weight: bold;
   font-size: clamp(2.5rem, 9vw, 4rem);
-  color: white;
+  color: var(--color-text);
   font-family: "Space Grotesk", system-ui, sans-serif;
 }
 
 h2 {
   font-family: "Space Grotesk", system-ui, sans-serif;
+  color:var(--color-heading);
 }
 
 h3 {
-  color: var(--color-white);
+  color: var(--color-heading);
   padding: 0.5rem 0.5rem;
 }
 
@@ -73,7 +94,7 @@ nav {
 }
 
 nav a {
-  color: var(--color-bg);
+  color: var(--color-on-primary);
   transition: transform 0.2s;
 }
 
@@ -144,10 +165,10 @@ section + section::before {
 .btn {
   display: inline-block;
   margin-top: 20px;
-  background-color: rgb(38, 37, 44);
-  color: white;
+  background-color: var(--color-surface-2);
+  color: var(--color-text);
   padding: 0.5rem 1.2rem;
-  border: 2px solid var(--color-text);
+  border: 2px solid var(--color-border);
   border-radius: 999px;
   font-size: 20px;
   transition: transform 0.2s;
@@ -162,7 +183,7 @@ section + section::before {
 .ab {
   font-size: 20px;
   margin-top: 20px;
-  color: var(--color-white);
+  color: var(--color-text);
 }
 
 /* Skills and tags  */
@@ -175,11 +196,11 @@ section + section::before {
 }
 
 .tag {
-  background-color: rgb(38, 37, 44);
-  color: white;
+  background-color: var(--color-surface-2);
+  color: var(--color-text);
   margin-top: 10px;
   padding: 0.5rem 1.05rem;
-  border: 2px solid white;
+  border: 2px solid var(--color-border);
   border-radius: 999px;
   transition: transform 0.2s;
 }
@@ -198,12 +219,13 @@ section + section::before {
 }
 
 .card {
+  background-color: var(--color-surface);
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
   margin-top: 30px;
-  padding: 0.5rem;
-  border: 2px solid var(--color-white);
+  padding: 0.75rem;
+  border: 2px solid var(--color-border);
   max-width: 380px;
   border-radius: 8px;
 }
@@ -222,12 +244,12 @@ section + section::before {
 .card-links {
   display: flex;
   margin-top: auto;
-  padding-top: 1.25rem;
+  padding:0.75rem;
   gap: 1.5rem;
 }
 
 .card-links a {
-  color: var(--color-white);
+  color: var(--color-text);
   text-decoration: underline;
 }
 
@@ -254,12 +276,11 @@ footer {
   margin: 0 auto;
   padding: 2rem 1.5rem;
   border-top: 1px solid var(--color-primary);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 1rem;
+  text-align: center;
   font-size: 0.9rem;
+}
+footer p {
+  margin: 0 auto;
 }
 
 /* Phones*/
@@ -281,11 +302,9 @@ footer {
     left: 1.25rem;
     width: calc(100% - 2.5rem);
   }
-
-  #home {
-    min-height: 60vh;
+  #home{
+    min-height:auto;
   }
-
   .btn {
     font-size: 1rem;
   }
@@ -303,4 +322,18 @@ footer {
   * {
     transition: none !important;
   }
+}
+
+/* toggle dark/light mode */
+#toggle{
+  width:2rem;
+  height: 2rem;
+  font-size: 1.25rem;
+  background-color: var(--color-primary);
+  border: none;
+  color: var(--color-on-primary);
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
